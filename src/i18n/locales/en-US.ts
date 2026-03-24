@@ -39,7 +39,7 @@ const enUS = {
   '语言名称-英文': 'English',
   '语言切换-标签': 'Interface language',
   '语言切换-提示': 'Switching updates text instantly and keeps your choice after refresh.',
-  '自动提交过程': '自动提交过程',
+  '自动提交': '自动提交',
 } as const satisfies FlatLocaleMessages
 
 export default enUS

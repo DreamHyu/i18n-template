@@ -56,7 +56,7 @@ const structureSnippet = `src/
         <h2 class="section-title">{{ i18n`关于页-目录结构标题` }}</h2>
         <pre class="code-block"><code>{{ structureSnippet }}</code></pre>
         <p>{{ i18n`新中文key` }}</p>
-        <p>{{ i18n`自动提交过程` }}</p>
+        <p>{{ i18n`自动提交` }}</p>
       </div>
     </aside>
   </section>

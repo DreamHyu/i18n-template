@@ -39,7 +39,7 @@ const zhCN = {
   '语言名称-英文': 'English',
   '语言切换-标签': '界面语言',
   '语言切换-提示': '切换后会立即更新页面文案，并在刷新后保留选择。',
-  '自动提交过程': '自动提交过程',
+  '自动提交': '自动提交',
 } as const satisfies FlatLocaleMessages
 
 export default zhCN
