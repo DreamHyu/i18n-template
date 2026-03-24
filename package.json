@@ -6,7 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --experimental-test-isolation=none --test",
+    "prepare": "husky",
+    "sync:i18n": "node scripts/sync-i18n.mjs --mode working-tree",
+    "sync:i18n:staged": "node scripts/sync-i18n.mjs --mode staged",
+    "sync:i18n:check": "node scripts/sync-i18n.mjs --mode working-tree --check",
+    "verify:i18n": "node scripts/check-i18n.mjs"
   },
   "dependencies": {
     "pinia": "^3.0.4",
@@ -18,8 +24,11 @@
     "@types/node": "^24.12.0",
     "@vitejs/plugin-vue": "^6.0.5",
     "@vue/tsconfig": "^0.9.0",
+    "husky": "^9.1.7",
     "typescript": "~5.9.3",
     "vite": "^8.0.1",
-    "vue-tsc": "^3.2.5"
+    "vue-tsc": "^3.2.5",
+    "@vue/compiler-dom": "^3.5.30",
+    "@vue/compiler-sfc": "^3.5.30"
   }
 }

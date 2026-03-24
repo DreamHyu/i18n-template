@@ -1,0 +1,4 @@
+interface:
+  display_name: "Explicit Imports"
+  short_description: "Enforce explicit imports for dependency analysis"
+  default_prompt: "Use $using-explicit-imports to refactor this code so every dependency is imported explicitly and no implicit globals remain."

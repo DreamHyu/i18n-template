@@ -4,6 +4,8 @@ export const SUPPORTED_LOCALES = ['zh-CN', 'en-US'] as const
 
 export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number]
 
+export type FlatLocaleMessages = Readonly<Record<string, string>>
+
 export const DEFAULT_LOCALE: SupportedLocale = 'zh-CN'
 
 export const FALLBACK_LOCALE: SupportedLocale = 'zh-CN'

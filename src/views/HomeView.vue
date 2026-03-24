@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
+import { i18n } from '../i18n'
 import { useCounterStore } from '../stores/counter'
 import { useAppStore } from '../stores/app'
 import { FALLBACK_LOCALE } from '../types/i18n'
@@ -14,53 +15,53 @@ const { locale } = storeToRefs(appStore)
 <template>
   <section class="page-grid">
     <article class="panel soft hero-card stack">
-      <p class="eyebrow">{{ $t('app.eyebrow') }}</p>
-      <h2 class="section-title">{{ $t('home.title') }}</h2>
-      <p class="muted">{{ $t('home.description') }}</p>
+      <p class="eyebrow">{{ i18n`应用眉标` }}</p>
+      <h2 class="section-title">{{ i18n`首页-标题` }}</h2>
+      <p class="muted">{{ i18n`首页-描述` }}</p>
 
       <div class="meta-row">
         <span class="pill">
-          {{ $t('common.currentLanguage') }}: <code>{{ locale }}</code>
+          {{ i18n`通用-当前语言` }}: <code>{{ locale }}</code>
         </span>
         <span class="pill secondary">
-          {{ $t('common.fallback') }}: <code>{{ FALLBACK_LOCALE }}</code>
+          {{ i18n`通用-回退语言` }}: <code>{{ FALLBACK_LOCALE }}</code>
         </span>
       </div>
 
       <div class="panel">
         <div class="stack">
-          <p><strong>{{ $t('home.runtime') }}</strong></p>
-          <p class="muted">{{ $t('home.runtimeDescription') }}</p>
-          <p>{{ $t('common.persisted') }}: {{ $t('common.yes') }}</p>
+          <p><strong>{{ i18n`首页-运行时能力标题` }}</strong></p>
+          <p class="muted">{{ i18n`首页-运行时能力描述` }}</p>
+          <p>{{ i18n`通用-已持久化到本地存储` }}: {{ i18n`通用-是` }}</p>
         </div>
       </div>
     </article>
 
     <aside class="stack">
       <div class="panel stack">
-        <h2 class="section-title">{{ $t('home.storeTitle') }}</h2>
-        <p class="muted">{{ $t('home.storeDescription') }}</p>
+        <h2 class="section-title">{{ i18n`首页-状态示例标题` }}</h2>
+        <p class="muted">{{ i18n`首页-状态示例描述` }}</p>
 
         <div class="actions">
           <button class="button primary" type="button" @click="counterStore.increment">
-            {{ $t('home.increment') }}
+            {{ i18n`首页-增加计数按钮` }}
           </button>
         </div>
 
         <p>
-          {{ $t('home.countLabel') }}:
+          {{ i18n`首页-当前计数标签` }}:
           <strong>{{ count }}</strong>
         </p>
       </div>
 
       <div class="panel stack">
-        <h2 class="section-title">{{ $t('home.featuresTitle') }}</h2>
+        <h2 class="section-title">{{ i18n`首页-内置内容标题` }}</h2>
 
         <div class="list">
-          <div class="list-item">{{ $t('home.featureRouting') }}</div>
-          <div class="list-item">{{ $t('home.featurePersistence') }}</div>
-          <div class="list-item">{{ $t('home.featureStructure') }}</div>
-          <div class="list-item">{{ $t('home.featureFallback') }}</div>
+          <div class="list-item">{{ i18n`首页-功能-路由一致性` }}</div>
+          <div class="list-item">{{ i18n`首页-功能-语言持久化` }}</div>
+          <div class="list-item">{{ i18n`首页-功能-目录结构` }}</div>
+          <div class="list-item">{{ i18n`首页-功能-回退机制` }}</div>
         </div>
       </div>
     </aside>
